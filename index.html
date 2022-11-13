@@ -8,6 +8,7 @@
             <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js" target="_blank"></script>
             <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js" crossorigin="anonymous"></script>
             <script src="./drive.js"></script>
+            <script src="./game.js"></script>
     </head>
     <body>
         <a-scene id="scene" background="color:lightblue">
@@ -20,10 +21,12 @@
             <!--city scene environment-->
             <a-entity id="cityScene" gltf-model="#city"  position="10 -2.63 -150" rotation="0 90 0" scale="1 1 1"></a-entity>
             <a-entity id="camera-rig" movement-controls="speed: 0.5; constrainToNavMesh: true" position="0 1 5" rotation="0 0 0" drive game="play"> 
-                <a-entity id="camera" camera position="1 1.6 0" rotation="0 0 0" look-controls="pointerLockEnabled: false">
-                <a-entity id="first-person-view" gltf-model="#handle" position="0.1 -0.120 -0.163" rotation="0 0 0"
-          scale="0.001 0.001 0.001">
-        </a-entity>
+                <a-entity id="camera" camera position="-0.1 1.6 0" rotation="0 0 0" look-controls="pointerLockEnabled: false">
+                    <a-entity id="first-person-view" gltf-model="#handle" position="0 -0.120 -0.163" rotation="0 180 0"scale="0.001 0.001 0.001"></a-entity>
+
+                <a-entity id="timer" position="-0.1 5 -7.1" text="font: kelsonsans; align: center; width: 10; color: black; value: 00:00"> </a-entity>
+
+      
           </a-entity> 
         </a-entity>
         </a-scene>
